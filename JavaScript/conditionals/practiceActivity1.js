@@ -31,5 +31,5 @@ let fifthPossibility =
 let sixthPossibility =
   firstPlayerChoice == scissors && secondPlayerChoice == paper;
 
-// //   Last possibility (tie)
-// let seventhPossibility = (firstPlayerChoice = secondPlayerChoice);
+//   Last possibility (tie)
+let seventhPossibility = (firstPlayerChoice = secondPlayerChoice);
