@@ -27,15 +27,16 @@ let fourthPossibility =
 let fifthPossibility =
   firstPlayerChoice == rock && secondPlayerChoice == scissors;
 
-// Sixth Possibility: Player 1 chooses Scissors and Player 2 chooses Paper (Player 2 wins)
+// Sixth Possibility: Player 1 chooses paper and Player 2 chooses scissors (Player 2 wins)
 let sixthPossibility =
-  firstPlayerChoice == scissors && secondPlayerChoice == paper;
+  firstPlayerChoice == paper && secondPlayerChoice == scissors;
 
 //   Last possibility (tie)
 let seventhPossibility = (firstPlayerChoice = secondPlayerChoice);
 
-//
-
+// Assigning values
+firstPlayerChoice = "paper";
+secondPlayerChoice = "scissors";
 // Create the conditional logic
 if (firstPossibility || secondPlayerChoice || thirdPossibility) {
   console.log("First Player won!");
