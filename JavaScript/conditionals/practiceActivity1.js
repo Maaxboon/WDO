@@ -2,44 +2,36 @@ let rock = "rock";
 let scissors = "scissors";
 let paper = "paper";
 
-// these two variables will be changed to test the conditional
-let firstPlayerChoice;
-let secondPlayerChoice;
+// Player choices
+let firstPlayerChoice = "rock"; // Change these to test different outcomes
+let secondPlayerChoice = "scissors";
 
-// First three possibilities (Player one wins)
-// First possibility: Player 1 chooses paper and Player 2 chooses rock (Player 1 wins)
-let firstPossibility = firstPlayerChoice == paper && secondPlayerChoice == rock;
+let firstPossibility;
+let secondPossibility;
+let thirdPossibility;
 
-// Second possibility: Player 1 chooses rock and player 2 chooses scissors (player 1 wins)
-let secondPossibility =
-  firstPlayerChoice == rock && secondPlayerChoice == scissors;
+let fourthPossibility;
+let fifthPossibility;
+let sixthPossibility;
 
-//   Third possibility: player 1 chooses scissors and player 2 chooses paper (player 1 wins)
-let thirdPossibility =
-  firstPlayerChoice == scissors && secondPlayerChoice == paper;
+let seventhPossibility;
 
-//   Next three possibilities (player 2 wins)
-// Fourth Possibility: Player 1 chooses Paper and Player 2 chooses Rock (Player 2 wins)
-let fourthPossibility =
-  firstPlayerChoice == paper && secondPlayerChoice == rock;
+// Check winning possibilities for player 1
+firstPossibility = firstPlayerChoice == paper && secondPlayerChoice == rock;
+secondPossibility = firstPlayerChoice == rock && secondPlayerChoice == scissors;
+thirdPossibility = firstPlayerChoice == scissors && secondPlayerChoice == paper;
 
-// Fifth Possibility: Player 1 chooses Rock and Player 2 chooses Scissors (Player 2 wins)
-let fifthPossibility =
-  firstPlayerChoice == rock && secondPlayerChoice == scissors;
+// Check winning possibilities for player 2
+fourthPossibility = firstPlayerChoice == rock && secondPlayerChoice == paper;
+fifthPossibility = firstPlayerChoice == scissors && secondPlayerChoice == rock;
+sixthPossibility = firstPlayerChoice == paper && secondPlayerChoice == scissors;
 
-// Sixth Possibility: Player 1 chooses paper and Player 2 chooses scissors (Player 2 wins)
-let sixthPossibility =
-  firstPlayerChoice == paper && secondPlayerChoice == scissors;
+// Check for tie
+seventhPossibility = firstPlayerChoice == secondPlayerChoice;
 
-//   Last possibility (tie)
-let seventhPossibility = (firstPlayerChoice = secondPlayerChoice);
-
-// Assigning values
-firstPlayerChoice = "paper";
-secondPlayerChoice = "scissors";
-// Create the conditional logic
-if (firstPossibility || secondPlayerChoice || thirdPossibility) {
-  console.log("First Player won!");
+// Conditional statements to declare winner or tie
+if (firstPossibility || secondPossibility || thirdPossibility) {
+  console.log("First player won!");
 } else if (fourthPossibility || fifthPossibility || sixthPossibility) {
   console.log("Second player won!");
 } else if (seventhPossibility) {
