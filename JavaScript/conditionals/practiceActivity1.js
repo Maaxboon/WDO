@@ -33,3 +33,16 @@ let sixthPossibility =
 
 //   Last possibility (tie)
 let seventhPossibility = (firstPlayerChoice = secondPlayerChoice);
+
+//
+
+// Create the conditional logic
+if (firstPossibility || secondPlayerChoice || thirdPossibility) {
+  console.log("First Player won!");
+} else if (fourthPossibility || fifthPossibility || sixthPossibility) {
+  console.log("Second player won!");
+} else if (seventhPossibility) {
+  console.log("It's a tie!");
+} else {
+  console.log("Something went wrong!");
+}
