@@ -16,10 +16,20 @@ let secondPossibility =
 
 //   Third possibility: player 1 chooses scissors and player 2 chooses paper (player 1 wins)
 let thirdPossibility =
-  fifthPossibility == scissors && secondPlayerChoice == paper;
+  firstPlayerChoice == scissors && secondPlayerChoice == paper;
 
-let fourthPossibility;
-let fifthPossibility;
-let sixthPossibility;
+//   Next three possibilities (player 2 wins)
+// Fourth Possibility: Player 1 chooses Paper and Player 2 chooses Rock (Player 2 wins)
+let fourthPossibility =
+  firstPlayerChoice == paper && secondPlayerChoice == rock;
 
-let seventhPossibility;
+// Fifth Possibility: Player 1 chooses Rock and Player 2 chooses Scissors (Player 2 wins)
+let fifthPossibility =
+  firstPlayerChoice == rock && secondPlayerChoice == scissors;
+
+// Sixth Possibility: Player 1 chooses Scissors and Player 2 chooses Paper (Player 2 wins)
+let sixthPossibility =
+  firstPlayerChoice == scissors && secondPlayerChoice == paper;
+
+// //   Last possibility (tie)
+// let seventhPossibility = (firstPlayerChoice = secondPlayerChoice);
